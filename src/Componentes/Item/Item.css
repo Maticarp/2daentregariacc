@@ -1,0 +1,45 @@
+
+
+.cardProducto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardProducto:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+Link {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+Link:hover {
+    background-color: #0056b3;
+}

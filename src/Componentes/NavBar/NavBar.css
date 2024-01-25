@@ -1,0 +1,56 @@
+/* NavBar.css */
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+    /* Puedes cambiar esto al color que desees */
+    color: white;
+}
+
+/* NavBar.css */
+
+/* Estilo del h1 dentro del enlace en el encabezado */
+header Link h1 {
+    color: #f8f6f2;
+    /* Cambia al color que desees */
+}
+
+/* Otros estilos según sea necesario */
+
+
+
+
+
+
+
+
+/* Estilo de la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilo de los enlaces de navegación activos */
+nav a.active {
+    color: #fff9f1;
+    /* Puedes cambiar esto al color que desees */
+}
+
+/* Estilo del carrito */
+/* Agrega estilos según sea necesario para tu componente CartWidget */
