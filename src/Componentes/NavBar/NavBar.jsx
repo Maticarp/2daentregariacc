@@ -5,27 +5,35 @@ import { Link, NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (
         <header>
-            <Link to="/" style={{ color: '#f8f6f2' }}>
+            <Link to="/" style={{ color: '#f8f6f2', textDecoration: 'none' }}>
                 <h1> Mia Tienda </h1>
             </Link>
             <nav>
                 <ul>
+
                     <li>
                         <NavLink to="/categoria/2">
-                            Camperas
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/categoria/3">
                             Camisetas
                         </NavLink>
                     </li>
+
+
                     <li>
-                        <NavLink to="/categoria/4">
+                        <NavLink to="/categoria/3">
                             Pantalones
                         </NavLink>
                     </li>
+
+
+                    <li>
+                        <NavLink to="/categoria/4">
+                            Camperas
+                        </NavLink>
+                    </li>
+
+
                 </ul>
+
             </nav>
 
             <CartWidget />

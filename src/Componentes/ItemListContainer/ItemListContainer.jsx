@@ -9,7 +9,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     
-const funcionProductos =idCategoria ? getProductosPorCategoria :getProductos;
+const funcionProductos = idCategoria ? getProductosPorCategoria : getProductos;
 
   funcionProductos (idCategoria)
 .then(res => setProductos (res))
@@ -20,9 +20,10 @@ const funcionProductos =idCategoria ? getProductosPorCategoria :getProductos;
 
   return (
     <div>
-      <h2>
-        Productos
-      </h2>
+      <h2 style={{ textAlign: 'center' }}>
+  Productos Oficiales
+</h2>
+
       < ItemList productos={productos} />
     </div>
 
