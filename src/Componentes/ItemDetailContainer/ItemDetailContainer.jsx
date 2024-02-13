@@ -1,46 +1,40 @@
 import { useState, useEffect } from "react";
-import { getUnProducto } from "../../asyncmock";
+// import { getUnProducto } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { db } from "../../services/config";
+import { getDoc, doc } from "firebase/firestore";
+
+
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
     const { idItem } = useParams();
 
     useEffect(() => {
-        getUnProducto(idItem)
+        const nuevoDoc = doc(db, "inventario", idItem);
+
+        getDoc(nuevoDoc)
             .then(res => {
-                setProducto(res);
-                setLoading(false);
+                const data = res.data();
+                const nuevoProducto = { id: res.id, ...data };
+                setProducto(nuevoProducto);
+
             })
-            .catch(err => {
-                setError("Error al cargar el producto");
-                setLoading(false);
-            });
-    }, [idItem]);
+            .catch(error => console.log("Cualquier cosa", error))
+    }, [idItem])
 
-    if (loading) {
-        return <p>Cargando...</p>;
-    }
 
-    if (error) {
-        return <p>{error}</p>;
-    }
+
+  
 
     return (
         <div>
-            {producto ? (
-                <ItemDetail {...producto} />
-            ) : (
-                <p>No se encontró el producto</p>
-            )}
+            <ItemDetail  {...producto} />
         </div>
-    );
-};
+    )
+}
 
-export default ItemDetailContainer;
+export default ItemDetailContainer
 
 

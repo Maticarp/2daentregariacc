@@ -7,17 +7,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
-
-h2 {
-    color: #333;
-}
-
-h3 {
-    color: #007bff;
-}
+.mi-enlace {
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+    color: #f3efef; /* Cambia el color del texto del enlace */
+    font-family:Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+  }
 
 p {
-    color: #555;
+    color: #000000;
     margin-bottom: 15px;
 }
 

@@ -1,0 +1,30 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 0.7cm;
+  background-color: #d81313;
+  color: #faf3f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.button-container button {
+  padding: 0px 10px;
+  border: none;
+
+}
+
+.button-container p {
+  font-size: 18px;
+  margin: 115px;
+}
+
+.button-container p {
+  font-size: 20px;
+  margin: 100px;
+  color: #f8f4f3;
+}
