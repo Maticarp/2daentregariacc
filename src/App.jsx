@@ -7,6 +7,10 @@ import { CarritoProvider } from './context/CarritoContext';
 import Cart from './Componentes/Cart/Cart';
 import Checkout from './Componentes/Checkout/Checkout';
 
+
+
+
+
 const App = () => {
   return (
     <>
